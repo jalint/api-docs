@@ -1,0 +1,27 @@
+meta {
+  name: List Sample
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BASE_URL}}/sample-matrices
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 5
+  ~search: 
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

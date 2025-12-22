@@ -1,0 +1,32 @@
+meta {
+  name: Update Test Parameter
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{BASE_URL}}/test-parameters/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "pH Level 5",
+    "unit": "pH",
+    "test_method_id": 1,
+    "price": 150000,
+    "standard_min_value": 6.5,
+    "standard_max_value": 8.5,
+    "standard_unit": "pH",
+    "status": "A",
+    "standard_note": "Based on WHO drinking water standards",
+    "description": "Measurement of acidity or alkalinity in water samples"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

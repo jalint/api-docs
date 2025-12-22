@@ -1,0 +1,22 @@
+meta {
+  name: Get Customer Type
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/customers/types/1
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

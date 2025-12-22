@@ -1,0 +1,22 @@
+meta {
+  name: Get Certification
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/certifications/3
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

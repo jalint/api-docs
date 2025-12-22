@@ -1,0 +1,26 @@
+meta {
+  name: Create Matrix
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/sample-matrices
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Debu Jauh",
+    "code": "DJ",
+    "sample_type_id": 2,
+    "description": "Lorem Ipsum OK",
+    "environment": 1 // 1.Hidup 2.Kerja 3.Umum
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

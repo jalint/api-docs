@@ -1,0 +1,22 @@
+meta {
+  name: Get Test Parameter
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/test-parameters/1
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

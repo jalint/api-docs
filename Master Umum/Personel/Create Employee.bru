@@ -1,0 +1,28 @@
+meta {
+  name: Create Employee
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/employees
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "ULFI ATHA TIFALNI YANUAR, ST",
+    "nip": "190101JM05",
+    "email": "ulfi@jli.co.id",
+    "phone_number": "082179877361",
+    "address": "Jl. Lrg. Garuda VI Kel. Telanai Pura Kec.Telanaipura Kota Jambi - 36122.",
+    "position_id": 2,
+    "certifications": []
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

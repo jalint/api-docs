@@ -1,0 +1,23 @@
+meta {
+  name: Create Position
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/positions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Analis Laboratorium",
+    "description":"Lorem"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

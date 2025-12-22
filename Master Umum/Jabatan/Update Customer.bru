@@ -1,0 +1,23 @@
+meta {
+  name: Update Customer
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE_URL}}/positions/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Administrator",
+    "description":"Lorem"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Create Position
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/certifications
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Analis Mikrobiologi",
+    "description": "-",
+    "test_parameters": [
+      1
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

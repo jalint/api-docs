@@ -1,0 +1,22 @@
+meta {
+  name: Delete Customer
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{BASE_URL}}/customers/3
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Update Test Method
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{BASE_URL}}/test-packages/2
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "pH Level",
+    "is_active": true,
+    "sample_matrix_id": 1,
+    "regulation_id": 1,
+    "price": 150000,
+    "test_parameters": [1],
+    "description": "Measurement of acidity or alkalinity in water samples"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

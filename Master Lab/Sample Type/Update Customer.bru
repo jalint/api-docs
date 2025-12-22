@@ -1,0 +1,22 @@
+meta {
+  name: Update Customer
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE_URL}}/sample-types/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Air"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

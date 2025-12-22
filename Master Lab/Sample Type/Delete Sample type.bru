@@ -1,0 +1,22 @@
+meta {
+  name: Delete Sample type
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{BASE_URL}}/sample-types/18
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

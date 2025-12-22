@@ -1,0 +1,22 @@
+meta {
+  name: Create Regulation
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/regulations
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Permenkes RI No. 2 Tahun 2025"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,27 @@
+meta {
+  name: List Certifications
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BASE_URL}}/certifications
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 
+  ~search: 
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

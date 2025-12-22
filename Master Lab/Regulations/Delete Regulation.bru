@@ -1,0 +1,22 @@
+meta {
+  name: Delete Regulation
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{BASE_URL}}/regulations/4
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

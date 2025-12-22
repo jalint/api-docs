@@ -1,0 +1,26 @@
+meta {
+  name: Update Certifications
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE_URL}}/certifications/3
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Analis Mikrobiologi",
+    "description": "-",
+    "test_parameters": [
+      1
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

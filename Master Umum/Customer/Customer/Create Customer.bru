@@ -1,0 +1,32 @@
+meta {
+  name: Create Customer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/customers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "PT Cinta Abadi",
+    "customer_type_id": 2,
+    "city": "Jakarta Selatan",
+    "province": "DKI Jakarta",
+    "email": "admin@cintaabadi.co.id",
+    "website": "https://www.contohjaya.co.id",
+    "npwp": "151410334",
+    "postal_code": "12345",
+    "status": true,
+    "address": "Jl. Gatot Subroto No. 123"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

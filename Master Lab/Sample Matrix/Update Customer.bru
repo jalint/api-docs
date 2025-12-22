@@ -1,0 +1,26 @@
+meta {
+  name: Update Customer
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE_URL}}/sample-matrices/8
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Debu Jauh",
+    "code": "DJ",
+    "sample_type_id": 2,
+    "description": "Lorem Ipsum",
+    "environment": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

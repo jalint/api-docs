@@ -1,0 +1,23 @@
+meta {
+  name: Update Test Method
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{BASE_URL}}/test-methods/10
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Potensi banjir",
+    "description": "Penentuan kadar asam atau basa dengan titrasi"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

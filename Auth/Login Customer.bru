@@ -1,0 +1,28 @@
+meta {
+  name: Login Customer
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/customer/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "test@example.com",
+    "password": "password"
+  }
+}
+
+script:post-response {
+  
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

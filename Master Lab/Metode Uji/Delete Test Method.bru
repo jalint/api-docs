@@ -1,0 +1,22 @@
+meta {
+  name: Delete Test Method
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{BASE_URL}}/test-methods/10
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

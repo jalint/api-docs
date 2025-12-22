@@ -1,0 +1,27 @@
+meta {
+  name: List Test Parameter
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/test-parameters
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 
+  ~search: 
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

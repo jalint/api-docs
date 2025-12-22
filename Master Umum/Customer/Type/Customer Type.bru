@@ -1,0 +1,22 @@
+meta {
+  name: Customer Type
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/customers/types
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "LAYANAN PUBLIK"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

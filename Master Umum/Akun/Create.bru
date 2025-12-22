@@ -1,0 +1,41 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/users
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Content-Type: multipart/form-data
+  : 
+}
+
+body:json {
+  {
+    "name": "ULFI ATHA TIFALNI YANUAR, ST",
+    "nip": "190101JM05",
+    "email": "ulfi@jli.co.id",
+    "phone_number": "082179877361",
+    "address": "Jl. Lrg. Garuda VI Kel. Telanai Pura Kec.Telanaipura Kota Jambi - 36122.",
+    "position_id": 2,
+    "certificatiaons": []
+  }
+}
+
+body:multipart-form {
+  email: admin@jli.co.id
+  password: helloworld
+  name: admin
+  photo: @file(/Users/andriansyah/Downloads/JLI.png)
+  role: admin
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

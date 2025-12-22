@@ -1,0 +1,22 @@
+meta {
+  name: Update Role
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE_URL}}/roles/3
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "PP"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

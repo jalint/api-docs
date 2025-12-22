@@ -1,0 +1,22 @@
+meta {
+  name: Create Sample Type
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/sample-types
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Filter Press"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,30 @@
+meta {
+  name: Create Test Method
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/test-packages
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "pH Level 5",
+    "is_active": true,
+    "sample_matrix_id": 1,
+    "regulation_id": 1,
+    "price": 150000,
+    "test_parameters": [
+      1
+    ],
+    "description": "Measurement of acidity or alkalinity in water samples"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

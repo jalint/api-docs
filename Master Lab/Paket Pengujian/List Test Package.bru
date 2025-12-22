@@ -1,0 +1,27 @@
+meta {
+  name: List Test Package
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/test-packages
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 
+  ~search: 
+}
+
+body:json {
+  {
+    "name": "Perusahaan"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

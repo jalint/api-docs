@@ -1,0 +1,32 @@
+meta {
+  name: Create Test Parameter
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/test-parameters
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "O3 (8 Jam)",
+    "unit": "µg/m3",
+    "test_method_id": 1,
+    "price": 180000,
+    "standard_min_value": 6.5,
+    "standard_max_value": 8.5,
+    "standard_unit": "µg/m3",
+    "status": "N/A",
+    "standard_note": "Based on WHO drinking water standards",
+    "description": "Sulfur Dioksida/ Sulphur Dioxide"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
