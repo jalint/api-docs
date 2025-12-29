@@ -1,0 +1,28 @@
+meta {
+  name: Create Subkon
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/subkons
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "PT Contoh Jaya",
+    "city": "Jakarta",
+    "province": "DKI Jakarta",
+    "postal_code": "12345",
+    "is_active": true,
+    "address": "Jl. Merdeka No. 1"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

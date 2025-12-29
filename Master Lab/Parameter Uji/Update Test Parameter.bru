@@ -5,23 +5,24 @@ meta {
 }
 
 patch {
-  url: {{BASE_URL}}/test-parameters/1
+  url: {{BASE_URL}}/test-parameters/2
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "name": "pH Level 5",
-    "unit": "pH",
+    "code": "(CH3)2S",
+    "name": "Metil Sulfida/Methyl Sulphide ((CH3)2)S)",
+    "unit": "ppm",
     "test_method_id": 1,
-    "price": 150000,
+    "price": 225000,
     "standard_min_value": 6.5,
     "standard_max_value": 8.5,
-    "standard_unit": "pH",
-    "status": "A",
+    "standard_unit": "ppm",
+    "status": "S",
     "standard_note": "Based on WHO drinking water standards",
-    "description": "Measurement of acidity or alkalinity in water samples"
+    "description": "Sulfur Dioksida/ Sulphur Dioxide"
   }
   
 }

@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/customers
+  url: {{BASE_URL}}/customers?per_page&search
   body: none
   auth: inherit
 }
 
 params:query {
-  ~per_page: 
-  ~search: 
+  per_page: 
+  search: 
 }
 
 body:json {
