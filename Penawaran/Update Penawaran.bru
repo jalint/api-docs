@@ -1,0 +1,46 @@
+meta {
+  name: Update Penawaran
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{BASE_URL}}/offers/15
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Penawaran Uji Data",
+    "customer_id": 2,
+    "customer_contact_id": 1,
+    "offer_date": "2025-01-15",
+    "expired_date": "2026-01-10",
+    "request_number": "REQ-2026-001",
+    "template_id": 1,
+    "additional_description": "Penawaran mencakup data.",
+    "testing_activities": "rutin",
+    "discount_amount": 0,
+    "vat_percent": 0,
+    "withholding_tax_percent": 0,
+    "is_draft": false,
+    "details": [
+      {
+        "test_parameter_id": 1,
+        "price": 150000,
+        "qty": 1
+      }
+      //     {
+      //       "test_parameter_id": 2,
+      //       "price": 225000,
+      //       "qty": 2
+      //     }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

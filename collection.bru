@@ -7,13 +7,10 @@ auth {
 }
 
 auth:bearer {
-  token: {{AUTH_LOCAL}}
+  token: {{AUTH_TOKEN}}
 }
 
 vars:pre-request {
-  BASE_URL: http://internal.jambilestari.co.id/api
   BASE_URL: http://jalint-internal.test/api
-  AUTH_LOCAL: 12|l0WReAJTQHQ9W47uXxz54dpF7gZD1uVt9vqxOoCH1b5b7ef0
-  AUTH_PROD: 1|QxccuiKl0ggrWfeQOP4V7ksqAKQV9iGZRsNahtPI641dd6c7
-  ADMIN_KUPTDK: 13|kDL5EmORe6SszOrrSocsgh6wrXOGchHleJ2sLrdYba244258
+  ~BASE_URL: http://internal.jambilestari.co.id/api
 }

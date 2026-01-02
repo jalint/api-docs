@@ -10,16 +10,20 @@ post {
   auth: none
 }
 
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
 body:json {
   {
-    "email": "admin_kuptdk@jli.co.id",
+    "email": "admin@jli.co.id",
     "password": "helloworld"
   }
 }
 
 script:post-response {
-  
-  
+  bru.setVar("AUTH_TOKEN", res.body.token);
 }
 
 settings {

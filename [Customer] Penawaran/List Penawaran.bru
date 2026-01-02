@@ -1,13 +1,18 @@
 meta {
-  name: Get Penawaran
+  name: List Penawaran
   type: http
-  seq: 3
+  seq: 2
 }
 
 get {
-  url: {{BASE_URL}}/offers/1
+  url: {{BASE_URL}}/customers/offers
   body: none
   auth: inherit
+}
+
+params:query {
+  ~search: 
+  ~filter: all
 }
 
 body:json {
