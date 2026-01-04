@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/offers?search=lingkungan
+  url: {{BASE_URL}}/offers
   body: none
   auth: inherit
 }
 
 params:query {
-  search: lingkungan
+  ~search: lingkungan
 }
 
 body:json {

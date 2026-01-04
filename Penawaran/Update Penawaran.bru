@@ -5,37 +5,47 @@ meta {
 }
 
 patch {
-  url: {{BASE_URL}}/offers/15
+  url: {{BASE_URL}}/offers/2
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "title": "Penawaran Uji Data",
+    "title": "Penawaran Pengujian Lingkungan",
     "customer_id": 2,
-    "customer_contact_id": 1,
-    "offer_date": "2025-01-15",
-    "expired_date": "2026-01-10",
-    "request_number": "REQ-2026-001",
+    "offer_date": "2026-01-05",
+    "expired_date": "2026-02-05",
+    "request_number": "REQ-001/2026",
     "template_id": 1,
-    "additional_description": "Penawaran mencakup data.",
-    "testing_activities": "rutin",
+    "additional_description": "Pengujian kualitas lingkungan hidup",
     "discount_amount": 0,
-    "vat_percent": 0,
-    "withholding_tax_percent": 0,
+    "location": "Pabrik X",
+    "testing_activities": "Rutin",
+    "vat_percent": 11,
+    "withholding_tax_percent": 2,
     "is_draft": false,
-    "details": [
+    "samples": [
       {
-        "test_parameter_id": 1,
-        "price": 150000,
-        "qty": 1
+        "title": "Contoh Uji 1 - Air Limbah",
+        "parameters": [
+          {
+            "test_parameter_id": 1,
+            "unit_price": 150000,
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "title": "Contoh Uji 2 - Udara",
+        "parameters": [
+          {
+            "test_parameter_id": 2,
+            "unit_price": 200000,
+            "qty": 2
+          }
+        ]
       }
-      //     {
-      //       "test_parameter_id": 2,
-      //       "price": 225000,
-      //       "qty": 2
-      //     }
     ]
   }
 }
