@@ -12,28 +12,39 @@ post {
 
 body:json {
   {
-    "title": "Penawaran Jasa Pengembangan Sistem",
+    "title": "Penawaran Pengujian Lingkungan",
     "customer_id": 2,
-    "customer_contact_id": 1,
-    "offer_date": "2025-01-15",
-    "expired_date": "2025-02-15",
-    "request_number": "REQ-2025-001",
+    "offer_date": "2026-01-05",
+    "expired_date": "2026-02-05",
+    "request_number": "REQ-001/2026",
     "template_id": 1,
-    "additional_description": "Penawaran ini mencakup pengembangan backend dan frontend.",
+    "additional_description": "Pengujian kualitas lingkungan",
     "discount_amount": 0,
-    "vat_percent": 0,
-    "withholding_tax_percent": 0,
+    "location": "Pabrik X",
+    "testing_activities": "Rutin",
+    "vat_percent": 11,
+    "withholding_tax_percent": 2,
     "is_draft": false,
-    "details": [
+    "samples": [
       {
-        "test_parameter_id": 1,
-        "price": 150000,
-        "qty": 1
+        "title": "Contoh Uji 1 - Air Limbah",
+        "parameters": [
+          {
+            "test_parameter_id": 1,
+            "unit_price": 150000,
+            "qty": 1
+          }
+        ]
       },
       {
-        "test_parameter_id": 2,
-        "price": 225000,
-        "qty": 2
+        "title": "Contoh Uji 2 - Udara",
+        "parameters": [
+          {
+            "test_parameter_id": 2,
+            "unit_price": 200000,
+            "qty": 1
+          }
+        ]
       }
     ]
   }
