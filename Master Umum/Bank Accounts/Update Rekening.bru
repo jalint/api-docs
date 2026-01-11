@@ -1,0 +1,28 @@
+meta {
+  name: Update Rekening
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE_URL}}/bank-accounts/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "bank_name": "BCA",
+    "account_number": "1234567890",
+    "account_name": "PT Jambi Lestari",
+    "branch": "Cabang Jambi",
+    "currency": "IDR",
+    "is_active": true,
+    "note": "Rekening utama pembayaran"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

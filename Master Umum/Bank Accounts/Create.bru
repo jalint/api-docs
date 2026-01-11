@@ -1,0 +1,28 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/bank-accounts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "bank_name": "BANK JAGO",
+    "account_number": "1123245678992",
+    "account_name": "PT Jambi Lestari International",
+    "branch": "Cabang Jambi",
+    "currency": "IDR",
+    "is_active": true,
+    "note": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

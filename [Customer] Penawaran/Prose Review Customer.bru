@@ -1,0 +1,23 @@
+meta {
+  name: Prose Review Customer
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{BASE_URL}}/customers/offers/5/review
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "decision": "approved", // "approved|rejected"
+    "note": "test reject"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,12 +1,12 @@
 meta {
-  name: Proses Review
+  name: [CUSTOMER] Upload Persetujuan SUBKON
   type: http
-  seq: 4
+  seq: 9
 }
 
 post {
-  url: {{BASE_URL}}/offers/5/review
-  body: json
+  url: {{BASE_URL}}/offers/5/documents/subkon/customer
+  body: multipartForm
   auth: inherit
 }
 
@@ -17,7 +17,7 @@ body:json {
     "testing_activities": "rutin",
     "details": [ //ADMIN KUPTDK
       {
-        "id": 14,
+        "id": 5,
         "test_parameter_id": 1,
         "subkon_id": 1,
         "price": 150000,
@@ -25,7 +25,7 @@ body:json {
         "is_delete": false
       },
       {
-        "id": 15,
+        "id": 6,
         "test_parameter_id": 2,
         "subkon_id": 2,
         "price": 200000,
@@ -34,6 +34,10 @@ body:json {
       }
     ]
   }
+}
+
+body:multipart-form {
+  file: @file(/Users/andriansyah/Downloads/dummies.pdf)
 }
 
 settings {

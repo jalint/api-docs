@@ -1,0 +1,36 @@
+meta {
+  name: Buat Penawaran
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/task-letters
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "offer_id": 1,
+    "task_date": "2026-01-10",
+    "note": "Pelaksanaan pengujian lapangan",
+    "officers": [
+      {
+        "name": "Budi Santoso",
+        "position": "Analis Lingkungan",
+        "description": "Ketua Tim"
+      },
+      {
+        "name": "Siti Aminah",
+        "position": "Teknisi",
+        "description": "Anggota"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

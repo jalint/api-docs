@@ -5,32 +5,30 @@ meta {
 }
 
 post {
-  url: {{BASE_URL}}/offers/5/review
+  url: {{BASE_URL}}/offers/2/review
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "decision": "approved", // "approved|rejected"
-    "note": "lanjut",
+    "decision": "rejected", // "approved|rejected"
+    "note": "tidak ada petugas",
     "testing_activities": "rutin",
     "details": [ //ADMIN KUPTDK
       {
-        "id": 14,
+        "id": 3,
         "test_parameter_id": 1,
         "subkon_id": 1,
         "price": 150000,
-        "qty": 1,
-        "is_delete": false
+        "qty": 1
       },
       {
-        "id": 15,
+        "id": 4,
         "test_parameter_id": 2,
         "subkon_id": 2,
         "price": 200000,
-        "qty": 1,
-        "is_delete": false
+        "qty": 1
       }
     ]
   }
