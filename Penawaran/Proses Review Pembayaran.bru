@@ -1,0 +1,22 @@
+meta {
+  name: Proses Review Pembayaran
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{BASE_URL}}/admin/payments/1/review
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "decision": "approved" // "approved|rejected"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

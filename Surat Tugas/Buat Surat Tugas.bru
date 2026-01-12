@@ -1,5 +1,5 @@
 meta {
-  name: Buat Penawaran
+  name: Buat Surat Tugas
   type: http
   seq: 1
 }
@@ -12,20 +12,20 @@ post {
 
 body:json {
   {
-    "offer_id": 1,
-    "task_date": "2026-01-10",
+    "offer_id": 5,
+    "task_date": "2026-01-25",
     "note": "Pelaksanaan pengujian lapangan",
     "officers": [
       {
-        "name": "Budi Santoso",
+        "id": "1",
         "position": "Analis Lingkungan",
         "description": "Ketua Tim"
-      },
-      {
-        "name": "Siti Aminah",
-        "position": "Teknisi",
-        "description": "Anggota"
       }
+      //     {
+      //       "id": "1",
+      //       "position": "Teknisi",
+      //       "description": "Anggota"
+      //     }
     ]
   }
 }

@@ -1,0 +1,36 @@
+meta {
+  name: Update ST
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE_URL}}/task-letters/2
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "offer_id": 5,
+    "task_date": "2026-01-25",
+    "note": "Pelaksanaan pengujian lapangan",
+    "officers": [
+      {
+        "id": "1",
+        "position": "Analis Lingkungan",
+        "description": "Ketua Tim"
+      }
+      //     {
+      //       "id": "1",
+      //       "position": "Teknisi",
+      //       "description": "Anggota"
+      //     }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

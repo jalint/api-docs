@@ -1,17 +1,13 @@
 meta {
-  name: List Penawaran
+  name: List ST
   type: http
   seq: 2
 }
 
 get {
-  url: {{BASE_URL}}/offers
+  url: {{BASE_URL}}/task-letters
   body: none
   auth: inherit
-}
-
-params:query {
-  ~search: lingkungan
 }
 
 body:json {
