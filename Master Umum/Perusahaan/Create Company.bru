@@ -1,0 +1,31 @@
+meta {
+  name: Create Company
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/companies
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "PT Contoh",
+    "province": "Jawa Barat",
+    "city": "Bandung",
+    "postal_code": "40123",
+    "email": "info@contoh.co.id",
+    "website": "https://contoh.co.id",
+    "npwp": "01.234.567.8-999.000",
+    "phone": "08123456789",
+    "address": "Jl. Contoh No.1"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
