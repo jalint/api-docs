@@ -1,0 +1,16 @@
+meta {
+  name: [PPCU] Review Surat Tugas
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{BASE_URL}}/task-letters/7/review
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

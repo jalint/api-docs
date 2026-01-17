@@ -4,9 +4,9 @@ meta {
   seq: 3
 }
 
-patch {
-  url: {{BASE_URL}}/test-methods/3
-  body: json
+post {
+  url: {{BASE_URL}}/test-methods/5
+  body: multipartForm
   auth: inherit
 }
 
@@ -15,6 +15,13 @@ body:json {
     "name": "SNI 19-7119.8-2005",
     "description": "Penentuan kadar asam atau basa dengan titrasi"
   }
+}
+
+body:multipart-form {
+  name: SNI 19-7119.8-20052
+  description: Lorem Ipsum
+  file: @file(/Users/andriansyah/Downloads/dummies.pdf)
+  _method: PATCH
 }
 
 settings {

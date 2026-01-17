@@ -6,7 +6,7 @@ meta {
 
 post {
   url: {{BASE_URL}}/test-methods
-  body: json
+  body: multipartForm
   auth: inherit
 }
 
@@ -15,6 +15,12 @@ body:json {
     "name": "SNI 19-7119.8-2005",
     "description": "lorem ipsum"
   }
+}
+
+body:multipart-form {
+  name: SNI 151410
+  description: Lorem Ipsum
+  file: @file(/Users/andriansyah/Downloads/dummies.pdf)
 }
 
 settings {
