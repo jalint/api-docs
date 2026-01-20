@@ -1,39 +1,22 @@
 meta {
-  name: Buat Penawaran
+  name: [Update]Buat Penawaran Customer
   type: http
-  seq: 1
+  seq: 8
 }
 
-post {
-  url: {{BASE_URL}}/offers
+patch {
+  url: {{BASE_URL}}/customers/offers/{:offfer}/draft
   body: json
   auth: inherit
 }
 
-headers {
-  Content-Type: application/json
-}
-
 body:json {
   {
-    "title": "TEST Penawaran",
-    "customer_id": 2,
+    "title": "Penawaran Pengujian Lingkungan",
     "offer_date": "2026-01-05",
-    "expired_date": "2026-01-11",
+    "expired_date": "2026-02-05",
     "request_number": "REQ-001/2026",
-    "template_id": 1,
-    "additional_description": "Pengujian kualitas lingkungan",
     "location": "Pabrik X",
-    //"testing_activities": "Rutin",
-    "vat_percent": 11,
-    "ppn_amount": 0,
-    "discount_amount": 0,
-    "pph_percent": 2,
-    "pph_amount": 0,
-    "subtotal_amount": "", // sebelum diskon
-    "total_amount": "", //setelah ppn,diskom,pph,
-    "is_dp": false,
-    "is_draft": true,
     "samples": [
       {
         "title": "Contoh Uji 1 - Air Limbah",

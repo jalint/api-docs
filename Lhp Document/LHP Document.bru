@@ -1,0 +1,52 @@
+meta {
+  name: LHP Document
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/lhp-documents
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "offer_id": 5,
+    "job_number": "JOB-ENV-001/2026",
+    "tanggal_dilaporkan": "2026-01-15",
+    "details": [
+      {
+        "identifikasi_laboratorium": "LAB-KIMIA-01",
+        "identifikasi_contoh_uji": "Air Limbah Titik A",
+        "sample_matrix_id": 1,
+        "tanggal_pengambilan": "2026-01-10",
+        "waktu_pengambilan": "09:30",
+        "tanggal_penerimaan": "2026-01-10",
+        "waktu_penerimaan": "13:00",
+        "waktu_analisis_start": "2026-01-11",
+        "waktu_analisis_end": "2026-01-12",
+        "koordinat_lintang": "-6.201234",
+        "koordinat_bujur": "106.845678"
+      },
+      {
+        "identifikasi_laboratorium": "LAB-KIMIA-02",
+        "identifikasi_contoh_uji": "Air Limbah Titik B",
+        "sample_matrix_id": 1,
+        "tanggal_pengambilan": "2026-01-10",
+        "waktu_pengambilan": "09:30",
+        "tanggal_penerimaan": "2026-01-10",
+        "waktu_penerimaan": "13:00",
+        "waktu_analisis_start": "2026-01-11",
+        "waktu_analisis_end": "2026-01-12",
+        "koordinat_lintang": "-6.201234",
+        "koordinat_bujur": "106.845678"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

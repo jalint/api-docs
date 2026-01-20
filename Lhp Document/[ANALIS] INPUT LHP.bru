@@ -1,0 +1,50 @@
+meta {
+  name: [ANALIS] INPUT LHP
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BASE_URL}}/lhp-documents/analis
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "lhp_document_id": 1,
+    "lhp": [
+      {
+        "lhp_document_detail_id": 1,
+        "parameters": [
+          {
+            "id": 7,
+            "result": "15"
+          },
+          {
+            "id": 7,
+            "result": "15"
+          }
+        ]
+      },
+      {
+        "lhp_document_detail_id": 1,
+        "parameters": [
+          {
+            "id": 7,
+            "result": "15"
+          },
+          {
+            "id": 7,
+            "result": "15"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,33 @@
+meta {
+  name: List LHP
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BASE_URL}}/lhp-documents
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "Penawaran Jasa Pengembangan Sistem",
+    "customer_id": 2,
+    "customer_contact_id": 1,
+    "offer_date": "2025-01-15",
+    "expired_date": "2025-02-15",
+    "request_number": "REQ-2025-001",
+    "template_id": 1,
+    "additional_description": "Penawaran ini mencakup pengembangan backend dan frontend.",
+    "discount_amount": 0,
+    "vat_percent": 0,
+    "withholding_tax_percent": 0,
+    "is_draft": false
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
