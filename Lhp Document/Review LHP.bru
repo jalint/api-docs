@@ -1,0 +1,33 @@
+meta {
+  name: Review LHP
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{BASE_URL}}/lhp-documents/3/review
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "decision": "approved", // "approved|rejected"
+    "note": "lanjut",
+    "lhp_document_parameters": [
+      {
+        "id": 8,
+        "description_results": "Mantap"
+      },
+      {
+        "id": 9,
+        "description_results": "Mantap"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
