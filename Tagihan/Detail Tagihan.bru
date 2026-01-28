@@ -1,18 +1,13 @@
 meta {
-  name: List Penawaran
+  name: Detail Tagihan
   type: http
-  seq: 2
+  seq: 3
 }
 
 get {
-  url: {{BASE_URL}}/offers?search=0006/Jalint-Lab/I/2026
+  url: {{BASE_URL}}/invoice-payments/9
   body: none
   auth: inherit
-}
-
-params:query {
-  search: 0006/Jalint-Lab/I/2026
-  ~filter: 
 }
 
 body:json {
