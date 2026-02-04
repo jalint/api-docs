@@ -1,0 +1,46 @@
+meta {
+  name: Upload Faktur Pajak
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{BASE_URL}}/invoices/7/faktur-pajak
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "decision": "approved", // "approved|rejected"
+    "note": "lanjut",
+    "testing_activities": "rutin",
+    "details": [ //ADMIN KUPTDK
+      {
+        "id": 5,
+        "test_parameter_id": 1,
+        "subkon_id": 1,
+        "price": 150000,
+        "qty": 1,
+        "is_delete": false
+      },
+      {
+        "id": 6,
+        "test_parameter_id": 2,
+        "subkon_id": 2,
+        "price": 200000,
+        "qty": 1,
+        "is_delete": false
+      }
+    ]
+  }
+}
+
+body:multipart-form {
+  faktur_pajak: @file(/Users/andriansyah/Downloads/dummies.pdf)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
