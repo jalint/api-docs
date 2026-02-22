@@ -6,14 +6,14 @@ meta {
 
 post {
   url: {{BASE_URL}}/task-letters
-  body: json
+  body: multipartForm
   auth: inherit
 }
 
 body:json {
   {
     "offer_id": 5,
-    "task_date": "2026-01-25",
+    "start_date": "2026-01-25",
     "note": "Pelaksanaan pengujian lapangan",
     "officers": [
       {
@@ -21,13 +21,20 @@ body:json {
         "position": "Analis Lingkungan",
         "description": "Ketua Tim"
       }
-      //     {
-      //       "id": "1",
-      //       "position": "Teknisi",
-      //       "description": "Anggota"
-      //     }
-    ]
+    ],
+    "rencana_contoh_uji": ""
   }
+}
+
+body:multipart-form {
+  offer_id: 5
+  start_date: 2026-02-22
+  end_date: 2026-02-25
+  note: Pelaksanaan pengujian lapangan
+  officers[0][id]: 1
+  officers[0][position]: Analis
+  officers[0][description]: Ketua Tim
+  surat_rencana_contoh_uji: @file(/Users/andriansyah/Downloads/kemen-bg.png)
 }
 
 settings {
